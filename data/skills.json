@@ -1,0 +1,85 @@
+{
+  "categories": {
+    "Programming Languages": {
+      "is_core_technical": true,
+      "skills": [
+        {"name": "Python", "aliases": ["python", "py"]},
+        {"name": "Java", "aliases": ["java"]},
+        {"name": "JavaScript", "aliases": ["javascript", "js", "ecmascript"]},
+        {"name": "TypeScript", "aliases": ["typescript", "ts"]},
+        {"name": "C++", "aliases": ["cpp", "c++"]},
+        {"name": "C#", "aliases": ["csharp", "c#", "dotnet"]},
+        {"name": "C", "aliases": ["c language", "c programming"]},
+        {"name": "SQL", "aliases": ["sql", "structured query language"]},
+        {"name": "Go", "aliases": ["golang", "go"]},
+        {"name": "Rust", "aliases": ["rust"]},
+        {"name": "PHP", "aliases": ["php"]},
+        {"name": "Ruby", "aliases": ["ruby"]},
+        {"name": "HTML", "aliases": ["html", "html5"]},
+        {"name": "CSS", "aliases": ["css", "css3"]}
+      ]
+    },
+    "Frameworks & Libraries": {
+      "is_core_technical": true,
+      "skills": [
+        {"name": "React", "aliases": ["react", "reactjs", "react.js"]},
+        {"name": "Angular", "aliases": ["angular", "angularjs"]},
+        {"name": "Vue.js", "aliases": ["vue", "vuejs", "vue.js"]},
+        {"name": "Django", "aliases": ["django"]},
+        {"name": "Flask", "aliases": ["flask"]},
+        {"name": "FastAPI", "aliases": ["fastapi", "fast api"]},
+        {"name": "Spring Boot", "aliases": ["spring boot", "springboot", "spring framework"]},
+        {"name": "Express.js", "aliases": ["express", "expressjs", "express.js"]},
+        {"name": "Node.js", "aliases": ["node", "nodejs", "node.js"]},
+        {"name": "TensorFlow", "aliases": ["tensorflow", "tf"]},
+        {"name": "PyTorch", "aliases": ["pytorch", "torch"]},
+        {"name": "Scikit-Learn", "aliases": ["scikit-learn", "sklearn"]},
+        {"name": "Pandas", "aliases": ["pandas"]},
+        {"name": "NumPy", "aliases": ["numpy"]}
+      ]
+    },
+    "Databases": {
+      "is_core_technical": true,
+      "skills": [
+        {"name": "PostgreSQL", "aliases": ["postgresql", "postgres"]},
+        {"name": "MySQL", "aliases": ["mysql"]},
+        {"name": "MongoDB", "aliases": ["mongodb", "mongo"]},
+        {"name": "Redis", "aliases": ["redis"]},
+        {"name": "SQLite", "aliases": ["sqlite"]},
+        {"name": "Oracle DB", "aliases": ["oracle", "oracle db"]},
+        {"name": "Cassandra", "aliases": ["cassandra"]},
+        {"name": "DynamoDB", "aliases": ["dynamodb"]}
+      ]
+    },
+    "Core CS & Concepts": {
+      "is_core_technical": true,
+      "skills": [
+        {"name": "Data Structures", "aliases": ["data structures", "dsa"]},
+        {"name": "Algorithms", "aliases": ["algorithms", "algo"]},
+        {"name": "OOP", "aliases": ["oop", "object oriented programming", "object-oriented programming"]},
+        {"name": "DBMS", "aliases": ["dbms", "database management system", "database management"]},
+        {"name": "REST API", "aliases": ["rest api", "restful api", "restful apis", "rest apis", "rest"]},
+        {"name": "System Design", "aliases": ["system design", "distributed systems"]},
+        {"name": "Machine Learning", "aliases": ["machine learning", "ml"]},
+        {"name": "Deep Learning", "aliases": ["deep learning", "dl"]},
+        {"name": "Microservices", "aliases": ["microservices", "microservice architecture"]}
+      ]
+    },
+    "Tools & Cloud": {
+      "is_core_technical": false,
+      "skills": [
+        {"name": "Git", "aliases": ["git", "version control"]},
+        {"name": "GitHub", "aliases": ["github"]},
+        {"name": "Docker", "aliases": ["docker", "containerization"]},
+        {"name": "Kubernetes", "aliases": ["kubernetes", "k8s"]},
+        {"name": "AWS", "aliases": ["aws", "amazon web services"]},
+        {"name": "Azure", "aliases": ["azure", "microsoft azure"]},
+        {"name": "GCP", "aliases": ["gcp", "google cloud platform", "google cloud"]},
+        {"name": "Linux", "aliases": ["linux", "unix", "bash", "shell scripting"]},
+        {"name": "CI/CD", "aliases": ["ci/cd", "cicd", "continuous integration"]},
+        {"name": "Jira", "aliases": ["jira"]},
+        {"name": "Postman", "aliases": ["postman"]}
+      ]
+    }
+  }
+}
