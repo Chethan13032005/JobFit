@@ -17,7 +17,12 @@ def extract_text_from_pdf(file_path: str) -> str:
         pages_text = [page.extract_text() or "" for page in reader.pages]
         return clean_extracted_text(" ".join(pages_text))
     except ImportError:
-        # Fallback reading heuristic for mock / test environments
         with open(file_path, "rb") as f:
             content = f.read().decode("latin-1", errors="ignore")
             return clean_extracted_text(content)
+
+def clean_pdf_artifacts(text: str) -> str:
+    """Strip common header, footer, page number patterns."""
+    text = re.sub(r'Page \d+ of \d+', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(Confidential|Resume|Curriculum Vitae)\b', '', text, flags=re.IGNORECASE)
+    return clean_extracted_text(text)
