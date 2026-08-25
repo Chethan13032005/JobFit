@@ -525,3 +525,16 @@ I also learned how important it is to test edge cases when working with text mat
 This project is intended as an internship learning project demonstrating Python programming, problem-solving, software development, testing, documentation, and technical understanding.
 
 The skill-gap prioritization is an enhancement to the selected **Project #56 — Resume Keyword Analyzer** and does not represent a separate project selection.
+
+
+## JobFit Architecture Flow
+```mermaid
+graph TD
+    Resume[Candidate Resume .pdf / .docx] --> Loader[Universal Document Loader]
+    JD[Job Specification .txt] --> Loader
+    Loader --> Normalizer[Text Normalization & Cleanser]
+    Normalizer --> Engine[Skill Taxonomy Matching Engine]
+    Taxonomy[(Expanded data/skills.json)] --> Engine
+    Engine --> Scorer[Weighted Compatibility Scorer]
+    Scorer --> Reports[Markdown / CSV / JSON Gap Exporter]
+```
