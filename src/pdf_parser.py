@@ -26,3 +26,17 @@ def clean_pdf_artifacts(text: str) -> str:
     text = re.sub(r'Page \d+ of \d+', '', text, flags=re.IGNORECASE)
     text = re.sub(r'\b(Confidential|Resume|Curriculum Vitae)\b', '', text, flags=re.IGNORECASE)
     return clean_extracted_text(text)
+
+def extract_pdf_metadata(file_path: str) -> Dict[str, Any]:
+    """Extract author, title, creation date metadata."""
+    try:
+        import pypdf
+        reader = pypdf.PdfReader(file_path)
+        meta = reader.metadata or {}
+        return {
+            "author": meta.get("/Author", ""),
+            "creator": meta.get("/Creator", ""),
+            "pages": len(reader.pages)
+        }
+    except Exception:
+        return {"author": "", "creator": "", "pages": 1}
