@@ -40,3 +40,7 @@ def extract_pdf_metadata(file_path: str) -> Dict[str, Any]:
         }
     except Exception:
         return {"author": "", "creator": "", "pages": 1}
+
+def handle_scanned_pdf_fallback(extracted_text: str) -> bool:
+    """Detect whether PDF is likely an image scan requiring OCR."""
+    return len(extracted_text.strip()) < 50
