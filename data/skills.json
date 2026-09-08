@@ -494,5 +494,22 @@
     "PEFT",
     "RLHF",
     "Model Quantization"
+  ],
+  "data_engineering": [
+    "Apache Spark",
+    "Kafka",
+    "Apache Flink",
+    "Airflow",
+    "dbt",
+    "Snowflake",
+    "Databricks"
+  ],
+  "databases_nosql": [
+    "MongoDB",
+    "Cassandra",
+    "Redis",
+    "Neo4j",
+    "DynamoDB",
+    "Elasticsearch"
   ]
 }
