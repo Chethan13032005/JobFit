@@ -35,3 +35,8 @@ def extract_tables_from_docx(file_path: str) -> List[List[str]]:
         return tables_data
     except Exception:
         return []
+
+def extract_docx_hyperlinks(text: str) -> List[str]:
+    """Extract portfolio, GitHub, and LinkedIn URLs from parsed text."""
+    url_pattern = r'https?://(?:www\.)?[a-zA-Z0-9./\-_]+'
+    return re.findall(url_pattern, text)
