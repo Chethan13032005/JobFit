@@ -39,3 +39,18 @@ def generate_csv_report(result: Dict[str, Any]) -> str:
         writer.writerow(["Competency", s, "MISSING"])
         
     return output.getvalue()
+
+def export_recommendation_matrix(missing_skills: List[str]) -> List[Dict[str, str]]:
+    """Map missing skills to recommended learning resources."""
+    catalog = {
+        "Docker": "Complete Docker Mastery on Udemy / Official Docs",
+        "Kubernetes": "Certified Kubernetes Administrator (CKA) Course",
+        "AWS": "AWS Certified Solutions Architect Associate Prep",
+        "PyTorch": "Deep Learning with PyTorch: A 60 Minute Blitz",
+        "Terraform": "HashiCorp Certified Terraform Associate Guide",
+        "RAG": "Building Production RAG Systems with LangChain & Vector DBs"
+    }
+    return [
+        {"skill": s, "recommended_course": catalog.get(s, f"Fundamentals of {s} on Coursera")}
+        for s in missing_skills
+    ]
