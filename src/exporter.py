@@ -54,3 +54,14 @@ def export_recommendation_matrix(missing_skills: List[str]) -> List[Dict[str, st
         {"skill": s, "recommended_course": catalog.get(s, f"Fundamentals of {s} on Coursera")}
         for s in missing_skills
     ]
+
+def generate_json_summary(result: Dict[str, Any]) -> str:
+    """Produce machine-readable schema for API integrations."""
+    return json.dumps({
+        "score": result.get("overall_score", 0),
+        "matchedCount": len(result.get("matched_skills", [])),
+        "missingCount": len(result.get("missing_skills", [])),
+        "matchedSkills": result.get("matched_skills", []),
+        "missingSkills": result.get("missing_skills", []),
+        "recommendations": export_recommendation_matrix(result.get("missing_skills", []))
+    }, indent=2)
