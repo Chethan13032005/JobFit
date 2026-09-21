@@ -538,3 +538,12 @@ graph TD
     Engine --> Scorer[Weighted Compatibility Scorer]
     Scorer --> Reports[Markdown / CSV / JSON Gap Exporter]
 ```
+
+
+### Domain-Weighted Compatibility Scoring
+Unlike naive keyword counting, JobFit applies domain weighting:
+- **Core Languages**: 25%
+- **Frameworks & Libraries**: 20%
+- **Cloud Infrastructure (AWS/GCP)**: 15%
+- **Containerization & Kubernetes**: 30%
+- **Modern AI / Vector Search**: 10%
