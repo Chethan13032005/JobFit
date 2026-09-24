@@ -425,5 +425,11 @@
     "AWS IAM",
     "AWS ECS",
     "AWS CloudFormation"
+  ],
+  "cloud_azure": [
+    "Azure Blob Storage",
+    "Azure Kubernetes Service (AKS)",
+    "Azure Functions",
+    "ARM Templates"
   ]
 }
