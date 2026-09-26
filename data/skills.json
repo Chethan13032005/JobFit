@@ -431,5 +431,11 @@
     "Azure Kubernetes Service (AKS)",
     "Azure Functions",
     "ARM Templates"
+  ],
+  "cloud_gcp": [
+    "Google Cloud Platform",
+    "Google Kubernetes Engine (GKE)",
+    "BigQuery",
+    "Cloud Storage"
   ]
 }
