@@ -437,5 +437,11 @@
     "Google Kubernetes Engine (GKE)",
     "BigQuery",
     "Cloud Storage"
+  ],
+  "devops_containers": [
+    "Docker",
+    "Podman",
+    "containerd",
+    "Docker Compose"
   ]
 }
