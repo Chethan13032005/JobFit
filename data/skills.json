@@ -443,5 +443,11 @@
     "Podman",
     "containerd",
     "Docker Compose"
+  ],
+  "devops_orchestration": [
+    "Kubernetes",
+    "Helm",
+    "OpenShift",
+    "Kustomize"
   ]
 }
