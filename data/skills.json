@@ -449,5 +449,11 @@
     "Helm",
     "OpenShift",
     "Kustomize"
+  ],
+  "devops_iac": [
+    "Terraform",
+    "Ansible",
+    "Pulumi",
+    "Terragrunt"
   ]
 }
