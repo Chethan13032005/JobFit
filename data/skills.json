@@ -455,5 +455,11 @@
     "Ansible",
     "Pulumi",
     "Terragrunt"
+  ],
+  "devops_cicd": [
+    "GitHub Actions",
+    "GitLab CI",
+    "Jenkins",
+    "ArgoCD"
   ]
 }
