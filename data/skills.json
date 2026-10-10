@@ -461,5 +461,11 @@
     "GitLab CI",
     "Jenkins",
     "ArgoCD"
+  ],
+  "devops_observability": [
+    "Prometheus",
+    "Grafana",
+    "Datadog",
+    "OpenTelemetry"
   ]
 }
