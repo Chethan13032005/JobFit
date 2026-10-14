@@ -467,5 +467,11 @@
     "Grafana",
     "Datadog",
     "OpenTelemetry"
+  ],
+  "ai_deep_learning": [
+    "PyTorch",
+    "TensorFlow",
+    "JAX",
+    "Keras"
   ]
 }
