@@ -473,5 +473,13 @@
     "TensorFlow",
     "JAX",
     "Keras"
+  ],
+  "ai_rag_vectors": [
+    "RAG",
+    "Retrieval-Augmented Generation",
+    "Pinecone",
+    "ChromaDB",
+    "Milvus",
+    "Qdrant"
   ]
 }
