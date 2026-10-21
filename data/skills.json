@@ -487,5 +487,12 @@
     "LlamaIndex",
     "vLLM",
     "Hugging Face Transformers"
+  ],
+  "ai_fine_tuning": [
+    "LoRA",
+    "QLoRA",
+    "PEFT",
+    "RLHF",
+    "Model Quantization"
   ]
 }
