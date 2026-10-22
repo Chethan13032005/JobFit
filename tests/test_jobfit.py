@@ -173,3 +173,12 @@ def test_category_breakdown_percentages(analyzer):
     assert tool_cat.total_jd_skills == 2
     assert tool_cat.matched_skills == 0
     assert tool_cat.coverage_percentage == 0.0
+
+
+def test_clean_pdf_artifacts():
+    from src.pdf_parser import clean_pdf_artifacts
+    dirty = "Page 1 of 5 Resume John Doe Confidential Software Engineer"
+    cleaned = clean_pdf_artifacts(dirty)
+    assert "Page 1 of 5" not in cleaned
+    assert "Confidential" not in cleaned
+    assert "John Doe" in cleaned
