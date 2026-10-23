@@ -547,3 +547,14 @@ Unlike naive keyword counting, JobFit applies domain weighting:
 - **Cloud Infrastructure (AWS/GCP)**: 15%
 - **Containerization & Kubernetes**: 30%
 - **Modern AI / Vector Search**: 10%
+
+
+## CLI Usage Guide
+
+```bash
+# Run analysis on a candidate PDF against a Target Job Spec
+python -m src.cli --resume candidate_resume.pdf --job job_spec.txt --format markdown
+
+# Export executive HTML report
+python -m src.cli --resume candidate_resume.docx --job job_spec.txt --format html
+```
