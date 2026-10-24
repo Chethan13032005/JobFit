@@ -182,3 +182,9 @@ def test_clean_pdf_artifacts():
     assert "Page 1 of 5" not in cleaned
     assert "Confidential" not in cleaned
     assert "John Doe" in cleaned
+
+def test_pdf_metadata_fallback():
+    from src.pdf_parser import extract_pdf_metadata
+    meta = extract_pdf_metadata("non_existent_file.pdf")
+    assert "pages" in meta
+    assert meta["pages"] == 1
