@@ -188,3 +188,8 @@ def test_pdf_metadata_fallback():
     meta = extract_pdf_metadata("non_existent_file.pdf")
     assert "pages" in meta
     assert meta["pages"] == 1
+
+def test_scanned_pdf_detection():
+    from src.pdf_parser import handle_scanned_pdf_fallback
+    assert handle_scanned_pdf_fallback("short text") is True
+    assert handle_scanned_pdf_fallback("A" * 100) is False
