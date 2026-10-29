@@ -193,3 +193,9 @@ def test_scanned_pdf_detection():
     from src.pdf_parser import handle_scanned_pdf_fallback
     assert handle_scanned_pdf_fallback("short text") is True
     assert handle_scanned_pdf_fallback("A" * 100) is False
+
+def test_docx_clean_text():
+    from src.docx_parser import clean_docx_text
+    raw = "Senior   Cloud   Engineer \n\n with  AWS expertise"
+    cleaned = clean_docx_text(raw)
+    assert cleaned == "Senior Cloud Engineer with AWS expertise"
