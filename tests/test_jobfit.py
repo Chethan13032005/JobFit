@@ -199,3 +199,10 @@ def test_docx_clean_text():
     raw = "Senior   Cloud   Engineer \n\n with  AWS expertise"
     cleaned = clean_docx_text(raw)
     assert cleaned == "Senior Cloud Engineer with AWS expertise"
+
+def test_docx_extract_hyperlinks():
+    from src.docx_parser import extract_docx_hyperlinks
+    sample = "Portfolio: https://github.com/developer and https://linkedin.com/in/dev"
+    urls = extract_docx_hyperlinks(sample)
+    assert len(urls) == 2
+    assert "https://github.com/developer" in urls
