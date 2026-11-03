@@ -495,21 +495,19 @@
     "RLHF",
     "Model Quantization"
   ],
-  "data_engineering": [
-    "Apache Spark",
-    "Kafka",
-    "Apache Flink",
-    "Airflow",
-    "dbt",
-    "Snowflake",
-    "Databricks"
+  "security_appsec": [
+    "OWASP Top 10",
+    "SAST",
+    "DAST",
+    "SonarQube",
+    "Snyk",
+    "Trivy"
   ],
-  "databases_nosql": [
-    "MongoDB",
-    "Cassandra",
-    "Redis",
-    "Neo4j",
-    "DynamoDB",
-    "Elasticsearch"
+  "security_cloud": [
+    "AWS GuardDuty",
+    "IAM Least Privilege",
+    "CloudTrail",
+    "Falco",
+    "HashiCorp Vault"
   ]
 }

@@ -558,3 +558,11 @@ python -m src.cli --resume candidate_resume.pdf --job job_spec.txt --format mark
 # Export executive HTML report
 python -m src.cli --resume candidate_resume.docx --job job_spec.txt --format html
 ```
+
+
+### Supported Skill Taxonomies
+JobFit includes curated taxonomies across:
+- **Cloud Infrastructure**: AWS, Azure, Google Cloud Platform.
+- **DevOps & Containers**: Docker, Kubernetes, Helm, Terraform, Ansible, ArgoCD.
+- **Data & AI Systems**: PyTorch, LangChain, RAG, ChromaDB, Spark, Kafka.
+- **AppSec & Cloud Security**: Vault, Snyk, SonarQube, IAM Policies.
