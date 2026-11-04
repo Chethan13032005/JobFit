@@ -206,3 +206,15 @@ def test_docx_extract_hyperlinks():
     urls = extract_docx_hyperlinks(sample)
     assert len(urls) == 2
     assert "https://github.com/developer" in urls
+
+def test_markdown_exporter_output():
+    from src.exporter import generate_markdown_report
+    sample_result = {
+        "overall_score": 85,
+        "matched_skills": ["Python", "Docker", "AWS"],
+        "missing_skills": ["Kubernetes"]
+    }
+    md = generate_markdown_report(sample_result)
+    assert "# JobFit Resume Match Report" in md
+    assert "**Overall Compatibility Score:** 85%" in md
+    assert "- Docker" in md
