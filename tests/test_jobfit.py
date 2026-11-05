@@ -218,3 +218,15 @@ def test_markdown_exporter_output():
     assert "# JobFit Resume Match Report" in md
     assert "**Overall Compatibility Score:** 85%" in md
     assert "- Docker" in md
+
+def test_csv_exporter_structure():
+    from src.exporter import generate_csv_report
+    sample_result = {
+        "overall_score": 90,
+        "matched_skills": ["Terraform"],
+        "missing_skills": ["ArgoCD"]
+    }
+    csv_out = generate_csv_report(sample_result)
+    assert "Category,Skill,Status" in csv_out
+    assert "Competency,Terraform,MATCHED" in csv_out
+    assert "Competency,ArgoCD,MISSING" in csv_out
