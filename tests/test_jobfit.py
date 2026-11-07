@@ -230,3 +230,11 @@ def test_csv_exporter_structure():
     assert "Category,Skill,Status" in csv_out
     assert "Competency,Terraform,MATCHED" in csv_out
     assert "Competency,ArgoCD,MISSING" in csv_out
+
+def test_recommendation_matrix():
+    from src.exporter import export_recommendation_matrix
+    missing = ["Docker", "Kubernetes", "PyTorch"]
+    matrix = export_recommendation_matrix(missing)
+    assert len(matrix) == 3
+    assert matrix[0]["skill"] == "Docker"
+    assert "CKA" in matrix[1]["recommended_course"]
