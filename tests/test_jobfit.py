@@ -238,3 +238,16 @@ def test_recommendation_matrix():
     assert len(matrix) == 3
     assert matrix[0]["skill"] == "Docker"
     assert "CKA" in matrix[1]["recommended_course"]
+
+def test_json_summary_schema():
+    from src.exporter import generate_json_summary
+    import json
+    data = {
+        "overall_score": 78,
+        "matched_skills": ["Python", "SQL"],
+        "missing_skills": ["RAG"]
+    }
+    summary = json.loads(generate_json_summary(data))
+    assert summary["score"] == 78
+    assert summary["matchedCount"] == 2
+    assert summary["missingCount"] == 1
