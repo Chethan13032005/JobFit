@@ -251,3 +251,12 @@ def test_json_summary_schema():
     assert summary["score"] == 78
     assert summary["matchedCount"] == 2
     assert summary["missingCount"] == 1
+
+def test_cloud_devops_skill_taxonomy():
+    import json
+    with open("data/skills.json", "r") as f:
+        skills = json.load(f)
+    assert "cloud_aws" in skills
+    assert "Docker" in skills["devops_containers"]
+    assert "Kubernetes" in skills["devops_orchestration"]
+    assert "Terraform" in skills["devops_iac"]
