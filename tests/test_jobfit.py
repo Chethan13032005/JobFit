@@ -260,3 +260,11 @@ def test_cloud_devops_skill_taxonomy():
     assert "Docker" in skills["devops_containers"]
     assert "Kubernetes" in skills["devops_orchestration"]
     assert "Terraform" in skills["devops_iac"]
+
+def test_ai_rag_taxonomy():
+    import json
+    with open("data/skills.json", "r") as f:
+        skills = json.load(f)
+    assert "RAG" in skills["ai_rag_vectors"]
+    assert "PyTorch" in skills["ai_deep_learning"]
+    assert "LangChain" in skills["ai_llm_frameworks"]
