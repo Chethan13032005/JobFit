@@ -268,3 +268,10 @@ def test_ai_rag_taxonomy():
     assert "RAG" in skills["ai_rag_vectors"]
     assert "PyTorch" in skills["ai_deep_learning"]
     assert "LangChain" in skills["ai_llm_frameworks"]
+
+def test_boundary_safe_regex_avoid_substrings():
+    import re
+    # Ensure 'Java' does not accidentally match inside 'JavaScript'
+    pattern = r'\bJava\b'
+    assert bool(re.search(pattern, "Proficient in Java and Python")) is True
+    assert bool(re.search(pattern, "Full stack JavaScript developer")) is False
