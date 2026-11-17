@@ -275,3 +275,15 @@ def test_boundary_safe_regex_avoid_substrings():
     pattern = r'\bJava\b'
     assert bool(re.search(pattern, "Proficient in Java and Python")) is True
     assert bool(re.search(pattern, "Full stack JavaScript developer")) is False
+
+def test_end_to_end_pipeline_simulation():
+    from src.exporter import generate_markdown_report, generate_json_summary
+    mock_run = {
+        "overall_score": 88,
+        "matched_skills": ["AWS EC2", "Docker", "Kubernetes", "PyTorch"],
+        "missing_skills": ["Terraform"]
+    }
+    md = generate_markdown_report(mock_run)
+    json_sum = generate_json_summary(mock_run)
+    assert "88%" in md
+    assert '"matchedCount": 4' in json_sum
