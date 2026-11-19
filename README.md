@@ -566,3 +566,19 @@ JobFit includes curated taxonomies across:
 - **DevOps & Containers**: Docker, Kubernetes, Helm, Terraform, Ansible, ArgoCD.
 - **Data & AI Systems**: PyTorch, LangChain, RAG, ChromaDB, Spark, Kafka.
 - **AppSec & Cloud Security**: Vault, Snyk, SonarQube, IAM Policies.
+
+
+## Troubleshooting & Edge Cases
+
+| Issue | Cause | Recommended Solution |
+| :--- | :--- | :--- |
+| `CorruptPDFException` | Image-only scan with no text layer | Pass through OCR pre-processor before analysis |
+| Substring False-Positive | Incomplete word boundaries | Use built-in `src.matcher.extract_matched_skills` |
+| Missing Specialty Framework | New framework not yet categorized | Append item directly into `data/skills.json` |
+
+## Project Roadmap
+- [x] Multi-format document parser (.pdf, .docx, .txt)
+- [x] Domain-weighted multi-category matching engine
+- [x] Automated report generators (Markdown, CSV, JSON, HTML)
+- [ ] Direct LinkedIn profile PDF export ingestion
+- [ ] Integration with LangChain local embeddings for semantic vector matching
