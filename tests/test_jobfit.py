@@ -287,3 +287,8 @@ def test_end_to_end_pipeline_simulation():
     json_sum = generate_json_summary(mock_run)
     assert "88%" in md
     assert '"matchedCount": 4' in json_sum
+
+def test_empty_resume_handling():
+    from src.pdf_parser import clean_extracted_text
+    assert clean_extracted_text("") == ""
+    assert clean_extracted_text("   ") == ""
